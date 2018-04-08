@@ -287,10 +287,8 @@ public class GuitarHero extends JComponent {
             g.drawImage(iMenu[14], 100, 50, null);
             g.drawImage(iMenu[1], 780, 40, null);
             g.drawImage(iMenu[2], 780, 120, null);
-            g.drawImage(iMenu[3], 780, 200, null);
-            g.drawImage(iMenu[4], 780, 280, null);
-            g.drawImage(iMenu[5], 780, 360, null);
-            g.drawImage(iMenu[7], 780, 440, null);
+            g.drawImage(iMenu[4], 780, 200, null);
+            g.drawImage(iMenu[7], 780, 280, null);
             g.drawImage(iMenu[6], 710, yFlecha, null);
         } else if (creditos) {
             g.drawImage(iMenu[12], 198, 229, null);
@@ -401,9 +399,9 @@ public class GuitarHero extends JComponent {
 
             g.drawImage(iMenu[10], 730, yFlecha_setlist - 20, null);
             if (sp) {
-                g.drawImage(iMenu[18], 250, 550, null);
-                g.drawImage(iMenu[17], 750, 550, null);
-                g.drawImage(iMenu[6], xFlecha_setlist, 550, null);
+                //g.drawImage(iMenu[18], 250, 550, null);
+                //g.drawImage(iMenu[17], 750, 550, null);
+                //g.drawImage(iMenu[6], xFlecha_setlist, 550, null);
             }
         } else if (singleplayer) {
             g.drawImage(iFondos[wall3], 0, 0, null);
@@ -1913,7 +1911,7 @@ public class GuitarHero extends JComponent {
             if (e.getKeyCode() == KeyEvent.VK_UP) {
                 if (menu) {
                     if (yFlecha == 40) {
-                        yFlecha = 440;
+                        yFlecha = 280;
                     } else {
                         yFlecha -= 80;
                     }
@@ -1969,7 +1967,7 @@ public class GuitarHero extends JComponent {
             }
             if (e.getKeyCode() == KeyEvent.VK_DOWN) {
                 if (menu) {
-                    if (yFlecha == 440) {
+                    if (yFlecha == 280) {
                         yFlecha = 40;
                     } else {
                         yFlecha += 80;
@@ -2073,21 +2071,21 @@ public class GuitarHero extends JComponent {
                         menu = false;
                         setlist = true;
                     }
-                    if (yFlecha == 200) {
+                    /*if (yFlecha == 200) {
 
-                    }
-                    if (yFlecha == 280) {
+                    }*/
+                    if (yFlecha == 200) {
                         try {
                             muestraDialogoArchivo();
                         } catch (LineUnavailableException | UnsupportedAudioFileException | IOException ex) {
                             Logger.getLogger(GuitarHero.class.getName()).log(Level.SEVERE, null, ex);
                         }
                     }
-                    if (yFlecha == 360) {
+                    /*if (yFlecha == 360) {
                         menu = false;
                         creditos = true;
-                    }
-                    if (yFlecha == 440) {
+                    }*/
+                    if (yFlecha == 280) {
                         System.exit(0);
                     }
                 }
